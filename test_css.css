@@ -1,0 +1,576 @@
+@charset "utf-8";
+		body, html {
+			padding: 0;
+			margin: 0;
+			width: 1900px;
+			height: auto;
+			background-color: #dddcdb;
+			scroll-behavior: smooth;
+		}
+
+		a:link {
+			text-decoration: none;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: inherit;
+		}
+
+/*헤드부분-------------------------------------*/
+		header {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 90px;
+			background-color: #023586;
+			position: relative;
+		}
+
+		#logo {
+			width: 300px;
+			height: 30px;
+			background-image: url(logo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			left: 810px;
+			top: 30px;
+			position: absolute;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			color: white;
+		}
+
+		#leftmenu {
+			float: left;
+			margin-left: 200px;
+			margin-top: 50px;
+			font-family: Anton;
+			font-weight: 400;
+		}
+
+
+		#leftmenu li {
+			float: left;
+			margin-right: 40px;
+		}
+		#leftmenu li > a {
+			color: #fff;
+		}
+
+		#rightmenu {
+			float: right;
+			margin-right: 200px;
+			margin-top: 50px;
+			font-family: Anton;
+			font-weight: 400;
+		}
+
+		#rightmenu li {
+			float: left;
+			margin-right: 40px;
+		}
+		#rightmenu li > a {
+			color: #fff;
+		}
+
+		.fa-search {
+			color: white;
+		}
+
+		nav ul li {
+			position: relative;
+			transform-origin: left left;
+		}
+
+		nav ul li a:link {
+			text-decoration: none;
+		}
+
+		nav ul li a:visited {
+			text-decoration: none;
+			color: white;
+
+		}
+
+		nav ul li:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 0px;
+			height: 1px;
+			position: absolute;
+			background: white;
+			top: 30px;
+			left: 0;
+			transition: 0.3s;
+
+		}
+
+		nav ul li:hover:after {
+			width: 100%;  /*애는 그냥 hr로 만들것 트랜스오리진으로 기준점 잡고 트랜스폼 스케일*/
+		}
+/*헤드끝------------------------------------------*/
+
+/*사이드바 시작*/
+        aside {
+        	width: 80px;
+        	height: 330px;
+        	background: #515452;
+        	color: #A2A8A5;
+        	position: fixed;
+        	z-index:999;
+        	right: 25px;
+        	bottom: 40px;
+        	border-radius: 7px;
+        	text-align: center;
+        }
+
+        aside div {
+        	margin-top: 25px;
+
+        }
+
+        #sidebar_hr {
+        	width: 50px;
+        }
+
+        span {
+        	color: #A2A8A5;
+        }
+
+        aside div a i {
+        	color: #A2A8A5;
+
+        }
+/*사이드바끝----------------------------------------*/
+
+/*메인 첫시작--------------------------------------------------------------------*/
+		.main {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 790px;
+		}
+
+		.main div {
+			float: left;
+			width: 33.33334%;
+			height: 790px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			filter: brightness(80%);
+		}
+
+		#leftima {
+			background-image: url(china.jpg);
+		}
+
+		#midima {
+			background-image: url(breed.jpg);
+		}
+
+		#rightima {
+			background-image: url(possible.jpg);
+		}
+
+		.main div:hover {
+			filter: brightness(110%);
+		}
+/*메인첫끝------------------------*/
+
+/*메인둘째 시작-----------------------------------*/
+		#main_two {
+			width: 1450px;
+			height: 800px;
+			margin: 0 auto;
+			margin-top: 350px;
+		}
+
+		#main_two p {
+			font-family: Anton;
+			font-weight: 400;
+			margin: 50px;
+		}
+
+		#main_two [id^=main_two] {
+			width: 458px;
+			height: 572px;
+			float: left;
+			margin: 0 10px;
+			position: relative;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+		}
+
+		#main_two #main_two_leftima {
+			background-image: url(lifebreed.jpg);
+		}
+		#main_two #main_two_midima {
+			background-image: url(okaybang.jpg);
+		}
+		#main_two #main_two_rightima {
+			background-image: url(pho.jpg);
+		}
+
+
+		.ima_text {
+			width: 458px;
+			height: 572px;
+			color: white;
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+			font-size: 25px;
+			font-weight: 600;
+		}
+		.ima_text h1 {
+			position: absolute;
+			bottom: 50px;
+			left: 30px;
+		}
+
+		.ima_text span {
+			width: 458px;
+			color: white;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			font-size: 15px;
+			font-family: 400;
+		}
+
+		#main_two_leftima:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 458px;
+			height: 0px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_two_leftima:hover:after {
+			opacity: 1;
+			height: 572px;
+		}
+
+		#main_two_midima:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 458px;
+			height: 0px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_two_midima:hover:after {
+			opacity: 1;
+			height: 572px;
+		}	
+
+		#main_two_rightima:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 458px;
+			height: 0px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_two_rightima:hover:after {
+			opacity: 1;
+			height: 572px;
+		}
+/*메인둘째 끝-----------------------------------------------------*/
+
+/*메인셋째 시작--------------------------------------------------*/
+		#main_three {
+			width: 1450px;
+			height: 800px;
+			margin: 0 auto;
+		}
+
+		#show_more {
+			float: right;
+		}
+		#pb_story {
+			display: inline;
+		}
+
+		.content {
+			float: left;
+			width: 722px;
+			height: 380px;
+			margin-top: 10px;
+			position: relative;
+		}
+		#main_three_1 {
+			background-image: url(77.jpg);
+			display: inline-block;
+			width: 400px;
+			height: 380px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+		#main_three_2 {
+			background-image: url(88.jpg);
+			display: inline-block;
+			width: 400px;
+			height: 380px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+		#main_three_3 {
+			background-image: url(99.jpg);
+			display: inline-block;
+			width: 400px;
+			height: 380px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+		#main_three_4 {
+			background-image: url(1010.jpg);
+			display: inline-block;
+			width: 400px;
+			height: 380px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		#main_three_1:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 400px;
+			height: 380px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_three_1:hover:after {
+			opacity: 1;
+			height: 380px;
+		}
+
+		#main_three_2:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 400px;
+			height: 380px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_three_2:hover:after {
+			opacity: 1;
+			height: 380px;
+		}
+
+		#main_three_3:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 400px;
+			height: 380px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_three_3:hover:after {
+			opacity: 1;
+			height: 380px;
+		}
+
+		#main_three_4:after {
+			content: "";
+			display: block;
+			clear: both;
+			width: 400px;
+			height: 380px;
+			background: linear-gradient(to top,rgb(0,0,0,0.5), transparent);
+			transition: 0.2s;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+		}
+
+		#main_three_4:hover:after {
+			opacity: 1;
+			height: 380px;
+		}
+
+		.first {
+			position: absolute;
+			top: 20px;
+			left: 410px;
+		}
+/*메인셋째끝----------------------------------------------------*/
+
+/*bx슬라이더 시작-------------------------
+*/
+/*bx슬라이더끝------------------------
+*/
+/*푸터전꺼 시작*/
+		#footer_front {
+			width: 1900px;
+			height: 100px;
+			margin-top: 200px;
+			text-align: left;
+		}
+
+		#footer_front div {
+			float: left;
+
+		}
+
+
+		.coll {
+			margin-top: 30px;
+			width: 1px;
+			height: 80px;
+			padding: 0;
+			margin: 0;
+			border-left:  1px solid blue;
+		}
+
+
+		#foot_3, #foot_1, #foot_2 {
+			width: 600px;
+			height: 100px;
+			position: relative;
+			font-family: black han sans;
+			font-weight: 400;
+			padding-left: 20px;
+		}
+
+		#foot_1:after {
+			content: "";
+			display: block;
+			clear: both;
+			background: red;
+			position: absolute;
+			width: 600px;
+			height: 100px;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+			opacity: 0;
+			transition: 0.3s;
+			padding-right: 20px;
+		}
+
+		#foot_1:hover:after {
+			opacity: 1;
+		}
+
+		#foot_2:after {
+			content: "";
+			display: block;
+			clear: both;
+			background: red;
+			position: absolute;
+			width: 600px;
+			height: 100px;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+			opacity: 0;
+			transition: 0.3s;
+			padding-right: 20px;
+		}
+
+		#foot_2:hover:after {
+			opacity: 1;
+		}
+
+		#foot_3:after {
+			content: "";
+			display: block;
+			clear: both;
+			background: red;
+			position: absolute;
+			width: 600px;
+			height: 100px;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to top,rgba(0,0,0,0.5),transparent);
+			opacity: 0;
+			transition: 0.3s;
+		}
+
+		#foot_3:hover:after {
+			opacity: 1;
+		}
+
+		.title {
+			font-family: 맑은고딕;
+			font-weight: 600;
+			color: lightblue;
+			line-height: 50px;
+			margin-left: 20px;
+		}
+/*푸터전꺼끝---------------------------------------------------------------*/
+/*푸터시작---------------------------------------------------------*/
+		footer {
+			width: 1900px;
+			height: 300px;
+			background: #454a56;
+		}
+
+
+		footer div  ul {
+			font-family: black han sans;
+			font-weight: 600;
+			font-size: 20px;
+			float: left;
+			padding: 0;
+			margin-top: 20px;
+			width: 30%;
+			text-align:center;
+			line-height: 40px;
+		}
+
+		footer ul li {
+			font-size: 15px;
+			font-family: 맑은고딕;
+			font-weight: 400;
+		}
+
+
+
+
+
+
